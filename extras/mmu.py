@@ -3,6 +3,7 @@
 #
 # Copyright (C) 2022  moggieuk#6538 (discord)
 #                     moggieuk@hotmail.com
+# Modified by Obscured84
 #
 # Inspired by original ERCF software
 #
@@ -892,7 +893,7 @@ class Mmu:
             if self._has_encoder():
                 self.encoder_sensor.set_clog_detection_length(self.variables.get(self.VARS_MMU_CALIB_CLOG_LENGTH, 15))
                 self._disable_encoder_sensor() # Initially disable clog/runout detection
-            self._log_always('(\_/)\n( *,*)\n(")_(") MMU Ready')
+            self._log_always('MMU Ready')
             if self.log_startup_status > 0:
                 self._log_always(self._tool_to_gate_map_to_human_string(self.log_startup_status == 1))
                 self._display_visual_state(silent=self.persistence_level < 4)
