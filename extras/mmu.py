@@ -169,7 +169,7 @@ class Mmu:
                   'silver', 'skyblue', 'slateblue', 'slategray', 'slategrey', 'snow', 'springgreen', 'steelblue', 'tan', 'teal', 'thistle', 'tomato',
                   'turquoise', 'violet', 'wheat', 'white', 'whitesmoke', 'yellow', 'yellowgreen']
 
-    UPGRADE_REMINDER = "Did you upgrade? Run Happy Hare './install.sh' again to fix configuration files and read https://github.com/moggieuk/Happy-Hare/README.md"
+    UPGRADE_REMINDER = "Did you upgrade? Run Happy Hare './install.sh' again to fix configuration files and read https://github.com/Obscured84/MMU-SW/README.md"
 
     def __init__(self, config):
         self.config = config
