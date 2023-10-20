@@ -104,7 +104,7 @@ The module can be installed into an existing Klipper installation with the insta
 
 ```
 cd ~
-git clone https://github.com/moggieuk/Happy-Hare.git
+git clone https://github.com/Obscured84/MMU-SW.git
 cd Happy-Hare
 
 ./install.sh -i
