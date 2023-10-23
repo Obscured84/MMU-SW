@@ -5166,14 +5166,15 @@ class Mmu:
                             self._log_always(msg)
                         return
                 except MmuError as ee:
-                    self._set_gate_status(gate, self.GATE_EMPTY)
+                   self._set_gate_status(gate, self.GATE_EMPTY)
                     self._set_filament_pos(self.FILAMENT_POS_UNLOADED, silent=True)
                     if tool >= 0:
                         msg = "Tool T%d - filament not detected. Gate #%d marked empty" % (tool, gate)
                     else:
                         msg = "Gate #%d - filament not detected. Marked empty" % gate
-                    if self._is_in_print():
+                    if self._is_in_print() and tools != "!":
                         self._mmu_pause(msg)
+                        return
                     else:
                         self._log_info(msg)
                 finally:
