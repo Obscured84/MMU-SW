@@ -645,7 +645,8 @@ restart_moonraker() {
 
 prompt_yn() {
     while true; do
-        read -n1 -p "$@ (y/n)? " yn
+        read -n1 -p "
+$@ (y/n)? " yn
         case "${yn}" in
             Y|y)
                 echo "y" 
@@ -663,7 +664,8 @@ prompt_123() {
     prompt=$1
     max=$2
     while true; do
-        read -p "${prompt} (1-${max})? " -n 1 number
+        read -p "
+${prompt} (1-${max})? " -n 1 number
         if [[ "$number" =~ [1-${max}] ]]; then
             echo ${number}
             break
@@ -714,6 +716,11 @@ questionaire() {
             mmu_vendor="ERCF"
             mmu_version="2.0"
             encoder_parking_distance="19"
+            ;;
+	3) 
+ 	    2)
+            mmu_vendor="TradRack"
+            mmu_version="beta"
             ;;
     esac
 
@@ -878,7 +885,8 @@ questionaire() {
     echo
     echo -e "${PROMPT}${SECTION}Which servo are you using?"
     echo -e "1) MG-90S"
-    echo -e "2) Savox SH0255MG${INPUT}"
+    echo -e "2) Savox SH0255MG"
+    echo -e "3) FT1117M${INPUT}"
     num=$(prompt_123 "Servo?" 2)
     echo
     if [ "${mmu_vendor}" == "ERCF" ]; then
@@ -901,6 +909,28 @@ questionaire() {
                 fi
                 servo_down_angle=30
                 ;;
+        esac
+    elif [ "${mmu_vendor}" == "TradRack" ]; then
+        case $num in
+            1)
+                servo_up_angle=30
+                servo_move_angle=${servo_up_angle}
+                servo_down_angle=140
+                ;;
+            2)
+                servo_up_angle=140
+                if [ "${mmu_version}" == "2.0" ]; then
+                    servo_move_angle=109
+                else
+                    servo_move_angle=${servo_up_angle}
+                fi
+                servo_down_angle=30
+                ;;
+	    3)
+     		servo_up_angle=140
+       		servo_move_angle=109
+	 	servo_down_angle=30
+   		;;
         esac
     else
         servo_up_angle=0
@@ -1122,18 +1152,14 @@ fi
 
 if [ "$UNINSTALL" -eq 0 ]; then
     echo -e "${EMPHASIZE}"
-    echo "Done.  Enjoy ERCF (and thank you Ette for a wonderful design)..."
+    echo "Done.  Enjoy your ${mmu_vendor} Credits to moggieuk, Ette & Annex Engineering"
     echo -e "${INFO}"
-    echo '(\_/)'
-    echo '( *,*)'
-    echo '(")_(") MMU Ready'
+    echo 'MMU Ready'
     echo
 else
     echo -e "${EMPHASIZE}"
     echo "Done.  Sad to see you go (but maybe you'll be back)..."
     echo -e "${INFO}"
-    echo '(\_/)'
-    echo '( v,v)'
-    echo '(")^(") MMU Unready'
+    echo 'MMU NOT ready'
     echo
 fi
