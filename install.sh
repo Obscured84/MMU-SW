@@ -681,6 +681,7 @@ questionaire() {
     echo -e "${PROMPT}What type of MMU are you running?${INPUT}"
     echo -e "1) ERCF v1.1 (all variations)"
     echo -e "2) ERCF v2.0"
+    echo -e "3) TradRack"
     num=$(prompt_123 "MMU Type?" 2)
     echo
     case $num in
@@ -923,8 +924,8 @@ questionaire() {
                 servo_down_angle=0
                 ;;
 	    3)
-     		servo_up_angle=180
-       		servo_move_angle=180
+     		servo_up_angle=131
+       		servo_move_angle=131
 	 	servo_down_angle=0
    		;;
         esac
