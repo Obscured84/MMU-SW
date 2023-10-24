@@ -190,8 +190,8 @@ class Mmu:
         self.sensors = {}
 
         # Specific vendor build parameters / tuning
-        self.mmu_vendor = config.get('mmu_vendor', self.VENDOR_ERCF)
-        self.mmu_version_string = config.get('mmu_version', "1.1")
+        self.mmu_vendor = config.get('mmu_vendor')
+        self.mmu_version_string = config.get('mmu_version')
         self.mmu_version = float(re.sub("[^0-9.]", "", self.mmu_version_string))
         bmg_circ = 23.
 
@@ -230,6 +230,15 @@ class Mmu:
                 self.cad_bypass_block_width = config.getfloat('cad_bypass_block_width', self.cad_bypass_block_width)
             self.cal_max_gates = 12
             self.cal_tolerance = 5.0
+        ###TradRack Params with Binky Mod
+        elif self.mmu_vendor.lower() == self.VENDOR_TRADRACK.lower():
+            
+                self.cad_gate0_pos = 0.8
+                self.cad_gate_width = 17 # Triple Decky
+                self.cad_bypass_offset = 5.7
+                self.cad_last_gate_offset = 17
+                self.encoder_default_resolution = bmg_circ / (2 * 12) # Binky 12 tooth disc with BMG gear
+            
         else:
             raise self.config.error("Support for non-ERCF systems is comming soon!")
 
