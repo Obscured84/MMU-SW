@@ -645,8 +645,7 @@ restart_moonraker() {
 
 prompt_yn() {
     while true; do
-        read -n1 -p "
-$@ (y/n)? " yn
+	read -n1 -p "$@ (y/n)? " yn
         case "${yn}" in
             Y|y)
                 echo "y" 
