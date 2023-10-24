@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/moggieuk/Happy-Hare/blob/main/doc/happy_hare_logo.jpg" alt='Happy Hare KlipperScreen' width='30%'>
+  <img src="https://github.com/Obscured84/MMU-SW/blob/main/doc/happy_hare_logo.jpg" alt='Happy Hare KlipperScreen' width='30%'>
   <h1 align="center">Happy Hare</h1>
 </p>
 
@@ -9,17 +9,17 @@ Universal MMU driver for Klipper
 
 <p align="center">
 <!--
-  <a aria-label="Downloads" href="https://github.com/moggieuk/Happy-Hare/releases">
+  <a aria-label="Downloads" href="https://github.com/Obscured84/MMU-SW/releases">
     <img src="https://img.shields.io/github/release/moggieuk/Happy-Hare?display_name=tag&style=flat-square">
   </a>
   -->
-  <a aria-label="Stars" href="https://github.com/moggieuk/Happy-Hare/stargazers">
+  <a aria-label="Stars" href="https://github.com/Obscured84/MMU-SW/stargazers">
     <img src="https://img.shields.io/github/stars/moggieuk/Happy-Hare?style=flat-square">
   </a>
-  <a aria-label="Forks" href="https://github.com/moggieuk/Happy-Hare/network/members">
+  <a aria-label="Forks" href="https://github.com/Obscured84/MMU-SW/network/members">
     <img src="https://img.shields.io/github/forks/moggieuk/Happy-Hare?style=flat-square">
   </a>
-  <a aria-label="License" href="https://github.com/moggieuk/Happy-Hare/blob/master/LICENSE">
+  <a aria-label="License" href="https://github.com/Obscured84/MMU-SW/blob/master/LICENSE">
     <img src="https://img.shields.io/github/license/moggieuk/Happy-Hare?style=flat-square">
   </a>
 </p>
@@ -135,7 +135,7 @@ Usage: ./install.sh [-k <klipper_home_dir>] [-c <klipper_config_dir>] [-i] [-u]
 <br>
 
 ### Other resources:
-<a href="https://www.youtube.com/watch?v=uaPLuWJBdQU"><img src="https://github.com/moggieuk/Happy-Hare/blob/main/doc/youtube1.png" width="30%"></a>
+<a href="https://www.youtube.com/watch?v=uaPLuWJBdQU"><img src="https://github.com/Obscured84/MMU-SW/blob/main/doc/youtube1.png" width="30%"></a>
 If you are german speaking here is a great instructional [video created by the Crydteam](https://www.youtube.com/watch?v=uaPLuWJBdQU)
 
 <br>
