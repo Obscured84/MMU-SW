@@ -235,7 +235,7 @@ class Mmu:
             
                 self.cad_gate0_pos = 0.8
                 self.cad_gate_width = 17 
-                self.cad_bypass_offset = 5.7
+                self.cad_bypass_offset = 17.5
                 self.cad_last_gate_offset = 17
                 self.encoder_default_resolution = bmg_circ / (2 * 12) # Binky 12 tooth disc with BMG gear
                 self.cal_tolerance = 5.0
