@@ -913,23 +913,19 @@ questionaire() {
     elif [ "${mmu_vendor}" == "TradRack" ]; then
         case $num in
             1)
-                servo_up_angle=30
+                servo_up_angle=0
                 servo_move_angle=${servo_up_angle}
-                servo_down_angle=140
+                servo_down_angle=0
                 ;;
             2)
-                servo_up_angle=140
-                if [ "${mmu_version}" == "2.0" ]; then
-                    servo_move_angle=109
-                else
-                    servo_move_angle=${servo_up_angle}
-                fi
-                servo_down_angle=30
+                servo_up_angle=0
+                servo_move_angle=${servo_up_angle}
+                servo_down_angle=0
                 ;;
 	    3)
-     		servo_up_angle=140
-       		servo_move_angle=109
-	 	servo_down_angle=30
+     		servo_up_angle=180
+       		servo_move_angle=180
+	 	servo_down_angle=0
    		;;
         esac
     else
